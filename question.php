@@ -1,4 +1,5 @@
 <?php
+echo "Form Values <br><br>";
 
 $name = $_POST["name"];
 $body = $_POST["body"];
@@ -15,7 +16,7 @@ else if (empty($name)) {
     exit();
 }
 else {
-    echo "<strong>Question Name</strong> is: <strong>$name</strong> <br><br>";
+    echo "Question Name is: $name <br><br>";
 }
 
 //Question Body
@@ -29,7 +30,7 @@ else if (empty($body)) {
     exit();
 }
 else {
-    echo "<strong>Question Body</strong> is: <strong>$body</strong> <br><br>";
+    echo "Question Body is: $body <br><br>";
 }
 
 //Question Skills
@@ -39,7 +40,7 @@ if (str_word_count($skills) < 2 ) {
 }
 else {
     //$skill_arr = explode(",", $skills);
-    echo "<strong>Question Skills</strong> are: <strong>$skills</strong> <br><br>";
+    echo "Question Skills are: $skills <br><br>";
 }
 
 ?>

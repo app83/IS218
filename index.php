@@ -1,4 +1,5 @@
 <?php
+echo "<strong>Form Values</strong> <br><br>";
 
 $email = $_POST["email"];
 $password = $_POST["password"];
@@ -13,7 +14,7 @@ else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit();
 }
 else {
-    echo "<strong>Email Address</strong> is: <strong>$email</strong> <br><br>";
+    echo "Email Address is: $email <br><br>";
 }
 
 //Password
@@ -27,7 +28,7 @@ else if (strlen($password) < 8)
     exit();
 }
 else {
-    echo "<strong>Password</strong> is: <strong>$password</strong> <br><br>";
+    echo "Password is: $password <br><br>";
 }
 
 ?>

@@ -1,4 +1,5 @@
 <?php
+echo "Form Values <br><br>";
 
 $fname = $_POST["fname"];
 $lname = $_POST["lname"];
@@ -12,7 +13,7 @@ if (empty($fname)) {
     exit();
 }
 else {
-    echo "<strong>First Name</strong> is: <strong>$fname</strong> <br><br>";
+    echo "First Name is: $fname <br><br>";
 }
 
 //Last Name
@@ -21,7 +22,7 @@ if (empty($lname)) {
     exit();
 }
 else {
-    echo "<strong>Last Name</strong> is: <strong>$lname</strong> <br><br>";
+    echo "Last Name is: $lname <br><br>";
 }
 
 //Birthday
@@ -30,9 +31,10 @@ if (empty($bday)) {
     exit();
 }
 else {
-    echo "<strong>Birthday</strong> is: <strong>$bday</strong> <br><br>";
+    echo "Birthday is: $bday <br><br>";
 }
 
+//Email and Password
 include('index.php');
 
 ?>
