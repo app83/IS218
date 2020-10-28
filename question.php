@@ -15,8 +15,8 @@
 $name = filter_input(INPUT_POST, 'name');
 $body = filter_input(INPUT_POST, 'body');
 $skills = filter_input(INPUT_POST, 'skills');
-
-//$new_skills = explode(',', $skills);
+$skills = explode(',', $skills);
+$skills = ($skills !== NULL) ? $skills : array();
 
 //Question Name
 if (strlen($name) < 3) {
@@ -41,14 +41,16 @@ else {
 }
 
 //Question Skills
-if (str_word_count($skills) < 2 ) {
+if (count($skills) < 2 ) {
     echo "At least 2 question skills need to be entered <br><br>";
 }
 else if (empty($skills)) {
     echo "Question Skills are required <br><br>";
 }
 else {
-    echo "Question Skills: <strong>$skills</strong> <br><br>";
+    echo "Question Skills: <strong>";
+    print_r ($skills);
+    echo "</strong> <br><br>";
 }
 
 ?>
